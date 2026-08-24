@@ -501,7 +501,10 @@ const TRANSLATIONS = {
     contact_phone_label: "Telefone & Reservas",
     contact_social_label: "Siga no Instagram",
     footer_rights: "Bar do Giba - Moema, São Paulo. Todos os direitos reservados.",
-    footer_designed: "Site desenvolvido para valorizar a tradição gastronômica paulistana."
+    footer_designed: "Site desenvolvido para valorizar a tradição gastronômica paulistana.",
+    footer_disclaimer_badge: "Projeto Demonstrativo",
+    footer_disclaimer: "Este site não é o oficial. É um projeto demonstrativo e conceitual desenvolvido exclusivamente para apresentação e avaliação pelo proprietário do estabelecimento. Marcas, nomes e imagens pertencem aos seus respectivos titulares.",
+    footer_developed: "Desenvolvido por Ameer Mustafa."
   },
   en: {
     meta_title: "Bar do Giba | Legendary Boteco & Best Pastéis in Moema - São Paulo",
@@ -572,7 +575,10 @@ const TRANSLATIONS = {
     contact_phone_label: "Phone & Inquiries",
     contact_social_label: "Follow on Instagram",
     footer_rights: "Bar do Giba - Moema, São Paulo. All rights reserved.",
-    footer_designed: "Designed to showcase São Paulo's rich gastronomic heritage."
+    footer_designed: "Designed to showcase São Paulo's rich gastronomic heritage.",
+    footer_disclaimer_badge: "Demonstration Project",
+    footer_disclaimer: "This website is not an official site. It is a conceptual demonstration project developed exclusively for presentation and evaluation by the establishment owner. Brands, names, and images belong to their respective owners.",
+    footer_developed: "Developed by Ameer Mustafa."
   },
   ar: {
     meta_title: "مطعم بار دو جيبا | أسطورة البوتيكو البرازيلي في مويما - ساو باولو",
@@ -643,6 +649,9 @@ const TRANSLATIONS = {
     contact_phone_label: "الهاتف والاستفسارات",
     contact_social_label: "تابعنا على إنستغرام",
     footer_rights: "Bar do Giba - مويما، ساو باولو. جميع الحقوق محفوظة.",
-    footer_designed: "موقع صُمم للاحتفاء بالتراث الغذائي العريق لمدينة ساو باولو."
+    footer_designed: "موقع صُمم للاحتفاء بالتراث الغذائي العريق لمدينة ساو باولو.",
+    footer_disclaimer_badge: "مشروع تجريبي وعرض توضيحي",
+    footer_disclaimer: "هذا الموقع ليس الموقع الرسمي، وإنما هو مشروع ونموذج أولي تجريبي تم تطويره خصيصاً للعرض والتقييم لمالك المطعم. جميع الأسماء والعلامات التجارية والصور محفوظة لأصحابها.",
+    footer_developed: "تم التطوير بواسطة أمير مصطفى (Developed by Ameer Mustafa)."
   }
 };
