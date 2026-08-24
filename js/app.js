@@ -7,7 +7,8 @@
   'use strict';
 
   // --- App State ---
-  let currentLang = 'pt';
+  // --- App State ---
+  let currentLang = localStorage.getItem('giba_lang') || 'pt';
   let currentCategory = 'all';
   let searchQuery = '';
   let cart = []; // [{ item: itemObject, qty: number }]
@@ -32,6 +33,12 @@
   const cartTotal = document.getElementById('cartTotal');
   const btnCheckoutWhatsApp = document.getElementById('btnCheckoutWhatsApp');
   const reservationForm = document.getElementById('reservationForm');
+  const resNameInput = document.getElementById('resName');
+  const resPhoneInput = document.getElementById('resPhone');
+  const resDateInput = document.getElementById('resDate');
+  const resTimeSelect = document.getElementById('resTime');
+  const resGuestsSelect = document.getElementById('resGuests');
+  const resNotesInput = document.getElementById('resNotes');
   const liveStatusBadge = document.getElementById('liveStatusBadge');
   const liveStatusText = document.getElementById('liveStatusText');
   const toastContainer = document.getElementById('toastContainer');
@@ -91,6 +98,9 @@
   function setLanguage(lang) {
     if (!TRANSLATIONS[lang]) return;
     currentLang = lang;
+    try {
+      localStorage.setItem('giba_lang', lang);
+    } catch (e) {}
 
     // Update HTML dir and lang attributes
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
@@ -99,8 +109,8 @@
     // Update language button display
     const flags = { pt: '🇧🇷', en: '🇺🇸', ar: '🇸🇦' };
     const codes = { pt: 'PT', en: 'EN', ar: 'AR' };
-    currentLangFlag.textContent = flags[lang];
-    currentLangCode.textContent = codes[lang];
+    if (currentLangFlag) currentLangFlag.textContent = flags[lang];
+    if (currentLangCode) currentLangCode.textContent = codes[lang];
 
     // Update active class in dropdown
     document.querySelectorAll('.lang-opt').forEach(btn => {
@@ -110,8 +120,13 @@
     // Update static translations in DOM
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (TRANSLATIONS[lang][key]) {
-        el.textContent = TRANSLATIONS[lang][key];
+      const val = TRANSLATIONS[lang][key];
+      if (val !== undefined) {
+        if (val.includes('<') || val.includes('&') || val.includes('<strong>')) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
       }
     });
 
@@ -125,8 +140,40 @@
     }
 
     // Update input placeholders
-    if (menuSearchInput) {
+    if (menuSearchInput && TRANSLATIONS[lang].menu_search_placeholder) {
       menuSearchInput.placeholder = TRANSLATIONS[lang].menu_search_placeholder;
+    }
+    if (resNameInput && TRANSLATIONS[lang].form_name_placeholder) {
+      resNameInput.placeholder = TRANSLATIONS[lang].form_name_placeholder;
+    }
+    if (resPhoneInput && TRANSLATIONS[lang].form_phone_placeholder) {
+      resPhoneInput.placeholder = TRANSLATIONS[lang].form_phone_placeholder;
+    }
+    if (resNotesInput && TRANSLATIONS[lang].form_notes_placeholder) {
+      resNotesInput.placeholder = TRANSLATIONS[lang].form_notes_placeholder;
+    }
+
+    // Update select options (Time & Guests)
+    if (resTimeSelect && TRANSLATIONS[lang].res_time_options) {
+      const selectedTime = resTimeSelect.value;
+      const opts = TRANSLATIONS[lang].res_time_options;
+      Array.from(resTimeSelect.options).forEach(opt => {
+        if (opts[opt.value]) {
+          opt.textContent = opts[opt.value];
+        }
+      });
+      resTimeSelect.value = selectedTime;
+    }
+
+    if (resGuestsSelect && TRANSLATIONS[lang].res_guests_options) {
+      const selectedGuests = resGuestsSelect.value;
+      const opts = TRANSLATIONS[lang].res_guests_options;
+      Array.from(resGuestsSelect.options).forEach(opt => {
+        if (opts[opt.value]) {
+          opt.textContent = opts[opt.value];
+        }
+      });
+      resGuestsSelect.value = selectedGuests;
     }
 
     // Re-render components that depend on language
@@ -164,7 +211,8 @@
 
     menuItemsGrid.innerHTML = filtered.map(item => {
       const trans = item.translations[currentLang] || item.translations.pt;
-      const badgeHtml = item.badge ? `<span class="dish-badge">${item.badge}</span>` : '';
+      const badgeText = trans.badge || item.badge || '';
+      const badgeHtml = badgeText ? `<span class="dish-badge">${badgeText}</span>` : '';
       const btnText = TRANSLATIONS[currentLang].btn_add_to_cart || 'Adicionar';
 
       return `
@@ -205,6 +253,7 @@
 
     reviewsGrid.innerHTML = REVIEWS.map(rev => {
       const quote = rev.quote[currentLang] || rev.quote.pt;
+      const role = (typeof rev.role === 'object') ? (rev.role[currentLang] || rev.role.pt) : rev.role;
       return `
         <div class="review-card">
           <div>
@@ -215,7 +264,7 @@
             <div class="author-avatar">${rev.avatar}</div>
             <div>
               <div class="author-name">${rev.author}</div>
-              <div class="author-role">${rev.role}</div>
+              <div class="author-role">${role}</div>
             </div>
           </div>
         </div>
@@ -368,7 +417,10 @@
     const notes = document.getElementById('resNotes').value.trim();
 
     if (!name || !phone || !date) {
-      alert('Por favor, preencha todos os campos obrigatórios.');
+      const errorMsg = currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 
+                       currentLang === 'en' ? 'Please fill in all required fields.' : 
+                       'Por favor, preencha todos os campos obrigatórios.';
+      alert(errorMsg);
       return;
     }
 
@@ -498,7 +550,7 @@
 
   // --- Initialize App ---
   function init() {
-    setLanguage('pt');
+    setLanguage(currentLang);
     setupEventListeners();
     updateLiveStatus();
     updateCartBadge();

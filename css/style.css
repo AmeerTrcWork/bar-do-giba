@@ -1486,3 +1486,97 @@ html[dir="rtl"] .toast-container {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Comprehensive Right-to-Left (RTL) Styles for Arabic Language
+   ========================================================================== */
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .logo-brand {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-subtitle {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .hero-buttons {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .story-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .feature-card {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .dish-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .dish-title,
+html[dir="rtl"] .dish-desc {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-group label,
+html[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+html[dir="rtl"] .review-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .review-quote {
+  font-style: normal;
+}
+
+html[dir="rtl"] .review-author {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .contact-info-card {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .contact-details {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-brand,
+html[dir="rtl"] .footer-links {
+  text-align: right;
+}
+
+html[dir="rtl"] .cart-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cart-total-row {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cart-item {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cart-item-info {
+  text-align: right;
+}
+
