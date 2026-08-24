@@ -1,0 +1,12 @@
+{
+  "name": "bar-do-giba-website",
+  "version": "1.0.0",
+  "description": "Website oficial e interativo do Bar do Giba em Moema, São Paulo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["restaurant", "sao-paulo", "boteco", "bar-do-giba"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

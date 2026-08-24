@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title id="page-title">Bar do Giba | O Lendário Boteco de Moema - São Paulo</title>
+  <meta name="description" id="meta-description" content="Conheça o Bar do Giba em Moema, São Paulo. Famoso pelos melhores pastéis artesanais, petiscos de boteco premiados pela Veja SP, feijoada e caipirinhas autorais.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Bar do Giba - Moema, São Paulo">
+  <meta property="og:description" content="O clássico boteco paulistano premiado pela Veja SP. Pastéis artesanais, feijoada e caipirinhas de frutas frescas.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥟</text></svg>">
+  
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, and Tajawal (for Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="logo-brand" id="brandLogo">
+        <div class="logo-badge">G</div>
+        <div class="logo-text">
+          <h1>BAR DO GIBA</h1>
+          <span>Moema • São Paulo</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active" data-i18n="nav_home">Início</a></li>
+          <li><a href="#story" class="nav-link" data-i18n="nav_story">Tradição</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="nav_menu">Cardápio na Lousa</a></li>
+          <li><a href="#gallery" class="nav-link" data-i18n="nav_gallery">Experiência</a></li>
+          <li><a href="#reserve" class="nav-link" data-i18n="nav_reserve">Reservas</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">Avaliações</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Onde Estamos</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions: Language Switcher, Cart Button, Mobile Menu Toggle -->
+      <div class="header-actions">
+        
+        <!-- Language Dropdown -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="Alterar Idioma / Switch Language">
+            <span id="currentLangFlag">🇧🇷</span>
+            <span id="currentLangCode">PT</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt active" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-opt" data-lang="en">🇺🇸 English</button>
+            <button class="lang-opt" data-lang="ar">🇸🇦 العربية</button>
+          </div>
+        </div>
+
+        <!-- Floating Cart Trigger -->
+        <button class="cart-nav-btn" id="cartNavBtn" aria-label="Abrir Comanda / View Order">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      
+      <!-- Live Status Badge (Real-time calculation) -->
+      <div class="status-badge" id="liveStatusBadge">
+        <span class="status-dot"></span>
+        <span id="liveStatusText" data-i18n="badge_open">Aberto Agora</span>
+        <span style="opacity: 0.6;">• Av. Moaci, 574</span>
+      </div>
+
+      <div class="section-tag" data-i18n="hero_tag">TRADIÇÃO BOÊMIA EM MOEMA</div>
+      
+      <h1 class="hero-title" data-i18n="hero_title">
+        Onde o Pastel é Arte & a Amizade é Tradição
+      </h1>
+      
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Sem cardápio de papel, mas com o coração na lousa. O clássico boteco paulistano premiado pela Veja SP que conquistou gerações de apreciadores do bom sabor.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary" id="btnExploreMenu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h8"/><path d="M8 17h5"/></svg>
+          <span data-i18n="btn_view_menu">Ver Cardápio Digital</span>
+        </a>
+
+        <a href="#reserve" class="btn btn-secondary" id="btnReserveHero">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span data-i18n="btn_reserve_table">Reservar Mesa</span>
+        </a>
+
+        <a href="https://wa.me/551155359220?text=Ol%C3%A1%20Bar%20do%20Giba,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank" rel="noopener" class="btn btn-whatsapp" id="btnWhatsAppDirect">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.63.078-1.748-.387-1.391-.579-2.316-1.99-2.385-2.08-.069-.092-.562-.751-.562-1.433 0-.682.357-1.018.484-1.155.127-.137.277-.172.37-.172.092 0 .185.002.266.006.086.004.202-.033.315.24.116.282.399.974.433 1.045.035.07.058.152.012.243-.046.092-.069.15-.138.232-.069.081-.146.182-.208.244-.07.069-.143.144-.061.285.081.139.362.597.777.966.534.476.985.624 1.124.693.139.07.22.058.301-.035.081-.093.346-.404.439-.543.092-.139.185-.116.312-.069.127.046.809.381.948.451.139.07.231.104.266.162.035.058.035.347-.109.752z"/></svg>
+          <span data-i18n="btn_order_now">Pedir pelo WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">30+</span>
+          <span class="stat-label" data-i18n="stats_years">Anos de Tradição</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100k+</span>
+          <span class="stat-label" data-i18n="stats_pasteis">Pastéis Servidos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">🏆</span>
+          <span class="stat-label" data-i18n="stats_awards">Prêmios Veja SP</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.8 ★</span>
+          <span class="stat-label" data-i18n="stats_rating">Estrelas no Google</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STORY & TRADITION SECTION ================= -->
+  <section class="section section-alt" id="story">
+    <div class="container">
+      <div class="story-grid">
+        
+        <!-- Story Image with Floating Badge -->
+        <div class="story-image-wrapper">
+          <img src="assets/images/pasteis.jpg" alt="Pastéis Artesanais do Bar do Giba" loading="lazy">
+          <div class="story-floating-badge">
+            <span class="badge-icon">🥟</span>
+            <div>
+              <strong style="color: var(--accent-gold); font-size: 1.05rem;">Patrimônio de Moema</strong>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Reconhecido pela crítica paulistana</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Narrative Content -->
+        <div class="story-content">
+          <div class="section-tag" data-i18n="story_badge">NOSSA HISTÓRIA</div>
+          <h2 class="section-title" data-i18n="story_title">A Alma do Boteco Paulista em Moema</h2>
+          
+          <p class="story-text" style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 16px;" data-i18n="story_p1">
+            No coração da Avenida Moaci, o <strong>Bar do Giba</strong> nasceu do amor pela boa mesa, pela cerveja gelada e pela acolhida calorosa. Aqui, a tradição dispensa afetações: as novidades do dia brilham nas lendárias <strong>lousas de giz</strong> espalhadas pelas paredes de tijolinho.
+          </p>
+          
+          <p class="story-text" style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;" data-i18n="story_p2">
+            Eleito repetidas vezes como um dos melhores botecos de São Paulo, o Giba é o ponto de encontro perfeito para amigos, famílias e amantes da boa gastronomia brasileira.
+          </p>
+
+          <!-- 3 Pillars Features -->
+          <div class="story-features">
+            <div class="feature-card">
+              <div class="feature-icon">🥟</div>
+              <div class="feature-info">
+                <h4 data-i18n="story_feature1_title">Massa Artesanal Sequinha</h4>
+                <p data-i18n="story_feature1_desc">Pastéis fritos no ponto perfeito com recheios generosos e crocância inigualável.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🥩</div>
+              <div class="feature-info">
+                <h4 data-i18n="story_feature2_title">Petiscos Premiados</h4>
+                <p data-i18n="story_feature2_desc">Receitas de família consagradas pelos maiores guias gastronômicos da cidade.</p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🍹</div>
+              <div class="feature-info">
+                <h4 data-i18n="story_feature3_title">Caipirinhas de Autor</h4>
+                <p data-i18n="story_feature3_desc">Frutas frescas combinadas com cachaças selecionadas e toques especiais.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIGITAL BLACKBOARD MENU SECTION ================= -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="text-center">
+        <div class="section-tag" data-i18n="menu_badge">A LOUSA DO GIBA</div>
+        <h2 class="section-title" data-i18n="menu_title">Cardápio Interativo & Especialidades</h2>
+        <p class="section-subtitle" data-i18n="menu_subtitle">
+          Escolha seus favoritos da nossa lousa digital e envie seu pedido diretamente para o balcão via WhatsApp!
+        </p>
+      </div>
+
+      <!-- Menu Controls: Live Search & Category Tabs -->
+      <div class="menu-controls">
+        
+        <!-- Search Input -->
+        <div class="menu-search-box">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="menuSearchInput" placeholder="Buscar por prato, ingrediente (ex: camarão, feijoada)..." aria-label="Buscar pratos">
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="category-tabs" id="categoryTabs">
+          <button class="tab-btn active" data-category="all" data-i18n="menu_tab_all">Todos os Pratos</button>
+          <button class="tab-btn" data-category="pasteis" data-i18n="menu_tab_pasteis">🥟 Pastéis Artesanais</button>
+          <button class="tab-btn" data-category="petiscos" data-i18n="menu_tab_petiscos">🥩 Petiscos de Balcão</button>
+          <button class="tab-btn" data-category="pratos" data-i18n="menu_tab_pratos">🍲 Pratos & Feijoada</button>
+          <button class="tab-btn" data-category="bebidas" data-i18n="menu_tab_bebidas">🍹 Caipirinhas & Chopp</button>
+          <button class="tab-btn" data-category="sobremesas" data-i18n="menu_tab_sobremesas">🍮 Sobremesas</button>
+        </div>
+
+      </div>
+
+      <!-- Menu Dishes Dynamic Grid -->
+      <div class="menu-grid" id="menuItemsGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VISUAL EXPERIENCE GALLERY ================= -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      
+      <div class="text-center">
+        <div class="section-tag" data-i18n="gallery_badge">ATMOSFERA</div>
+        <h2 class="section-title" data-i18n="gallery_title">Momentos & Sabores Inesquecíveis</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/hero.jpg" alt="Ambiente do Bar do Giba" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-caption">Aconchego & Boemia em Moema</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/pasteis.jpg" alt="Pastéis quentinhos" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-caption">Engibaiado de Pastéis Crocantes</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/feijoada.jpg" alt="Feijoada Completa Tradicional" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-caption">Feijoada Tradicional de Sábado</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/caipirinhas.jpg" alt="Caipirinhas Artesanais" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-caption">Caipirinhas com Frutas Frescas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TABLE RESERVATION SECTION ================= -->
+  <section class="section" id="reserve">
+    <div class="container">
+      
+      <div class="reserve-card">
+        <div class="text-center">
+          <div class="section-tag" data-i18n="reserve_badge">VIVA A EXPERIÊNCIA</div>
+          <h2 class="section-title" data-i18n="reserve_title">Reserve Sua Mesa no Giba</h2>
+          <p class="section-subtitle" data-i18n="reserve_subtitle">
+            Garante seu cantinho especial para aniversários, encontros de amigos ou confraternizações.
+          </p>
+        </div>
+
+        <form class="reserve-form" id="reservationForm">
+          <div class="form-group">
+            <label for="resName" data-i18n="form_name">Seu Nome Completo</label>
+            <input type="text" id="resName" class="form-control" placeholder="Ex: Roberto Silva" required>
+          </div>
+
+          <div class="form-group">
+            <label for="resPhone" data-i18n="form_phone">WhatsApp para Confirmação</label>
+            <input type="tel" id="resPhone" class="form-control" placeholder="Ex: (11) 99999-8888" required>
+          </div>
+
+          <div class="form-group">
+            <label for="resDate" data-i18n="form_date">Data Desejada</label>
+            <input type="date" id="resDate" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="resTime" data-i18n="form_time">Horário</label>
+            <select id="resTime" class="form-control" required>
+              <option value="12:00">12:00 (Almoço / Feijoada Sáb & Dom)</option>
+              <option value="13:30">13:30 (Almoço)</option>
+              <option value="17:30">17:30 (Happy Hour)</option>
+              <option value="19:00" selected>19:00 (Jantar & Petiscos)</option>
+              <option value="20:30">20:30 (Noite)</option>
+              <option value="21:30">21:30 (Boemia)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="resGuests" data-i18n="form_guests">Número de Pessoas</label>
+            <select id="resGuests" class="form-control" required>
+              <option value="2">2 Pessoas</option>
+              <option value="4" selected>4 Pessoas</option>
+              <option value="6">6 Pessoas</option>
+              <option value="8">8 Pessoas</option>
+              <option value="10+">10+ Pessoas (Grupo / Aniversário)</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="resNotes" data-i18n="form_notes">Observações ou Ocasião Especial (Opcional)</label>
+            <input type="text" id="resNotes" class="form-control" placeholder="Ex: Aniversário, mesa próxima à calçada...">
+          </div>
+
+          <div class="form-group full-width" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.63.078-1.748-.387-1.391-.579-2.316-1.99-2.385-2.08-.069-.092-.562-.751-.562-1.433 0-.682.357-1.018.484-1.155.127-.137.277-.172.37-.172.092 0 .185.002.266.006.086.004.202-.033.315.24.116.282.399.974.433 1.045.035.07.058.152.012.243-.046.092-.069.15-.138.232-.069.081-.146.182-.208.244-.07.069-.143.144-.061.285.081.139.362.597.777.966.534.476.985.624 1.124.693.139.07.22.058.301-.035.081-.093.346-.404.439-.543.092-.139.185-.116.312-.069.127.046.809.381.948.451.139.07.231.104.266.162.035.058.035.347-.109.752z"/></svg>
+              <span data-i18n="form_btn_submit">Confirmar Reserva no WhatsApp</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS & AWARDS SECTION ================= -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      
+      <div class="text-center">
+        <div class="section-tag" data-i18n="reviews_badge">RECONHECIMENTO</div>
+        <h2 class="section-title" data-i18n="reviews_title">O Que Dizem Nossos Clientes & Críticos</h2>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT, HOURS & MAP SECTION ================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      
+      <div class="text-center" style="margin-bottom: 48px;">
+        <div class="section-tag" data-i18n="contact_badge">VENHA NOS VISITAR</div>
+        <h2 class="section-title" data-i18n="contact_title">Endereço, Horários & Contato</h2>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Info Cards -->
+        <div class="contact-info-list">
+          
+          <div class="contact-info-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4 data-i18n="contact_address_label">Endereço em Moema</h4>
+              <p>Av. Moaci, 574 - Moema, São Paulo - SP<br>CEP 04083-001 (Próximo ao Shopping Ibirapuera)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4 data-i18n="contact_hours_label">Horário de Funcionamento</h4>
+              <p>
+                <strong>Terça a Sexta:</strong> 17:00 às 00:30<br>
+                <strong>Sábado:</strong> 12:00 às 00:30 (Feijoada Tradicional)<br>
+                <strong>Domingo:</strong> 12:00 às 18:00<br>
+                <span style="color: var(--accent-red);">Segunda-feira: Fechado</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4 data-i18n="contact_phone_label">Telefone & Reservas</h4>
+              <p>
+                Telefone Fixo: <a href="tel:1155359220" style="color: var(--accent-gold); font-weight: 700;">(11) 5535-9220</a><br>
+                WhatsApp Oficial: <a href="https://wa.me/551155359220" target="_blank" style="color: #25D366; font-weight: 700;">+55 11 5535-9220</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📸</div>
+            <div class="contact-details">
+              <h4 data-i18n="contact_social_label">Siga no Instagram</h4>
+              <p>
+                <a href="https://www.instagram.com/oficialbardogiba/" target="_blank" rel="noopener" style="color: var(--accent-gold); font-weight: 700;">@oficialbardogiba</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Embedded Interactive Google Map -->
+        <div class="map-container">
+          <iframe 
+            src="https://maps.google.com/maps?q=Av.+Moaci,+574+-+Moema,+S%C3%A3o+Paulo+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            loading="lazy" 
+            title="Localização do Bar do Giba no Google Maps">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="logo-brand">
+            <div class="logo-badge">G</div>
+            <div class="logo-text">
+              <h2>BAR DO GIBA</h2>
+              <span>Moema • São Paulo</span>
+            </div>
+          </div>
+          <p>O templo dos pastéis artesanais e da autêntica boemia paulistana. Tradição, petiscos premiados e momentos inesquecíveis em Moema.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#story">Nossa Tradição</a></li>
+            <li><a href="#menu">Cardápio na Lousa</a></li>
+            <li><a href="#reserve">Reservar Mesa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Destaques</h4>
+          <ul>
+            <li><a href="#menu">Pastéis Campeões</a></li>
+            <li><a href="#menu">Feijoada de Sábado</a></li>
+            <li><a href="#menu">Caipirinhas de Autor</a></li>
+            <li><a href="#contact">Como Chegar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 Bar do Giba - Moema, São Paulo. Todos os direitos reservados.</span>
+        <span data-i18n="footer_designed">Site desenvolvido para valorizar a tradição gastronômica paulistana.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SLIDE-OVER CART / COMANDA DRAWER ================= -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop">
+    <div class="cart-drawer" id="cartDrawer">
+      
+      <div class="cart-header">
+        <h3 data-i18n="cart_title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Sua Comanda no Giba
+        </h3>
+        <button class="close-cart-btn" id="closeCartBtn" aria-label="Fechar Comanda">&times;</button>
+      </div>
+
+      <div class="cart-body" id="cartBody">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span style="font-weight: 600; color: var(--text-muted);" data-i18n="cart_total">Total Estimado:</span>
+          <span class="cart-total-amount" id="cartTotal">R$ 0,00</span>
+        </div>
+
+        <button class="btn btn-whatsapp" id="btnCheckoutWhatsApp" style="width: 100%; padding: 14px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.63.078-1.748-.387-1.391-.579-2.316-1.99-2.385-2.08-.069-.092-.562-.751-.562-1.433 0-.682.357-1.018.484-1.155.127-.137.277-.172.37-.172.092 0 .185.002.266.006.086.004.202-.033.315.24.116.282.399.974.433 1.045.035.07.058.152.012.243-.046.092-.069.15-.138.232-.069.081-.146.182-.208.244-.07.069-.143.144-.061.285.081.139.362.597.777.966.534.476.985.624 1.124.693.139.07.22.058.301-.035.081-.093.346-.404.439-.543.092-.139.185-.116.312-.069.127.046.809.381.948.451.139.07.231.104.266.162.035.058.035.347-.109.752z"/></svg>
+          <span data-i18n="cart_btn_whatsapp">Enviar Pedido via WhatsApp</span>
+        </button>
+
+        <p class="cart-note" data-i18n="cart_note">
+          * O pedido será enviado diretamente ao WhatsApp do Bar do Giba para confirmação.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
