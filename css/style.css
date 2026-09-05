@@ -393,7 +393,7 @@ html[dir="rtl"] .lang-dropdown {
   align-items: center;
   padding: calc(var(--header-height) + 40px) 0 60px;
   background: linear-gradient(to bottom, rgba(15, 13, 11, 0.4), rgba(15, 13, 11, 0.95)),
-              url('../assets/images/hero_food.jpg') center/cover no-repeat;
+              url('../assets/images/hero_pastel_chopp.jpg?v=3.0') center/cover no-repeat;
   overflow: hidden;
 }
 
