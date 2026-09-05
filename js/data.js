@@ -36,7 +36,7 @@ const MENU_ITEMS = [
     category: "pasteis",
     featured: true,
     price: 46.00,
-    image: "assets/images/pasteis.jpg",
+    image: "assets/images/pasteis_artesanais.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Campeão Veja SP",
@@ -60,7 +60,7 @@ const MENU_ITEMS = [
     category: "pasteis",
     featured: true,
     price: 18.50,
-    image: "assets/images/pasteis.jpg",
+    image: "assets/images/pasteis_artesanais.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Especialidade da Casa",
@@ -83,7 +83,7 @@ const MENU_ITEMS = [
     id: "pastel-carne-seca",
     category: "pasteis",
     price: 16.00,
-    image: "assets/images/pasteis.jpg",
+    image: "assets/images/pasteis_artesanais.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Favorito Tradicional",
@@ -106,7 +106,7 @@ const MENU_ITEMS = [
     id: "pastel-palmito-queijo",
     category: "pasteis",
     price: 15.00,
-    image: "assets/images/pasteis.jpg",
+    image: "assets/images/pasteis_artesanais.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Vegetariano",
@@ -132,7 +132,7 @@ const MENU_ITEMS = [
     category: "petiscos",
     featured: true,
     price: 68.00,
-    image: "assets/images/petiscos.jpg",
+    image: "assets/images/petiscos.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Mais Pedido",
@@ -140,84 +140,84 @@ const MENU_ITEMS = [
         desc: "Carne seca desfiada puxada na manteiga de garrafa e cebola roxa, acompanhada de mandioca macia por dentro e crocante por fora."
       },
       en: {
-        badge: "Best Seller",
+        badge: "Top Seller",
         name: "Sautéed Sun-Dried Beef with Golden Yucca",
-        desc: "Tender shredded beef sautéed in artisanal bottled butter with red onions, served with crispy golden yucca cassava fries."
+        desc: "Hand-shredded Brazilian sun-dried beef sautéed in clarified butter with caramelized red onions, served with golden crispy fried cassava."
       },
       ar: {
         badge: "الأكثر طلباً",
-        name: "لحم بقري مجفف ومحمص مع الكسافا المقلية",
-        desc: "لحم بقري مجفف ومتبل محمر في زبدة الزجاجة التقليدية مع البصل، يقدم مع الكسافا المقرمشة من الخارج والطرية من الداخل."
+        name: "لحم مجفف متبل مع كاسافا ذهبية مقرمشة",
+        desc: "لحم بقري متبل ومشوح بالزبدة البلدية والبصل المكرمل، يُقدم مع الكاسافا (المانديوكا) المقرمشة من الخارج والطرية من الداخل."
       }
     }
   },
   {
-    id: "torresmo-crocante",
+    id: "torresmo-rolo",
     category: "petiscos",
     featured: true,
-    price: 44.00,
-    image: "assets/images/petiscos.jpg",
+    price: 49.00,
+    image: "assets/images/petiscos.jpg?v=3.0",
     translations: {
       pt: {
-        badge: "Crocância Perfeita",
-        name: "Torresmo de Rolo Estaladiço",
-        desc: "Torresmo pururucado e estaladiço, dourado no ponto exato, servido com gomos de limão cravo fresco."
+        badge: "Pururuca Perfeita",
+        name: "Torresmo de Rolo Artesanal Crocante",
+        desc: "Panceta suína enrolada e marinada com cachaça e especiarias, pururucada e servida com gomos de limão Tahiti."
       },
       en: {
-        badge: "Ultra-Crispy",
-        name: "Crispy Crackling Pork Belly (Torresmo)",
-        desc: "Ultra-crispy golden pork belly cracklings, seasoned to perfection and served with fresh Brazilian Rangpur lime wedges."
+        badge: "Crispy Crackling",
+        name: "Artisan Crispy Rolled Pork Belly Cracklings",
+        desc: "Slow-roasted pork belly rolled and marinated in cachaça and herbs, deep-fried to ultra-crispy perfection, served with fresh lime wedges."
       },
       ar: {
-        badge: "قرمشة استثنائية",
-        name: "توريزمو مقرمش (Torresmo)",
-        desc: "قطع مقرمشة ذهبية متبلة على الطريقة البرازيلية الشعبية تقدم مع شرائح الليمون الأخضر المنعش."
-      }
-    }
-  },
-  {
-    id: "caldinho-feijao",
-    category: "petiscos",
-    price: 19.00,
-    image: "assets/images/feijoada.jpg",
-    translations: {
-      pt: {
-        badge: "Aconchego",
-        name: "Caldinho de Feijão Amigo do Giba",
-        desc: "Caldo de feijão preto aveludado e temperado na medida certa, finalizado com torresminho crocante, bacon e cheiro verde."
-      },
-      en: {
-        badge: "Comfort Broth",
-        name: "Giba's Black Bean Soup Shot (Caldinho)",
-        desc: "Rich velvety black bean broth spiced with garlic and herbs, topped with crispy bacon bits, cracklings, and fresh parsley."
-      },
-      ar: {
-        badge: "حساء دافئ",
-        name: "شوربة الفاصوليا السوداء البرازيلية (كالدينيو)",
-        desc: "حساء الفاصوليا السوداء المخملي المتبل بالثوم والأعشاب والبهارات البرازيلية الغنية مع قطع مقرمشة وبقدونس."
+        badge: "مقرمش ومتبل",
+        name: "توريزمو مقرمش محمص بالبهارات (لحم مقرمش)",
+        desc: "قطع لحم مقرمشة متبلة بالأعشاب والليمون ومحمرة حتى القرمشة المثالية الذهبية."
       }
     }
   },
   {
     id: "bolinho-bacalhau",
     category: "petiscos",
-    price: 52.00,
-    image: "assets/images/petiscos.jpg",
+    price: 48.00,
+    image: "assets/images/feijoada.jpg?v=3.0",
     translations: {
       pt: {
-        badge: "Receita Clássica",
-        name: "Bolinhos de Bacalhau Tradicionais (8 un.)",
-        desc: "Receita artesanal com legítimo bacalhau da Noruega desfiado e batatas selecionadas, fritos na hora."
+        badge: "Tradição Portuguesa",
+        name: "Bolinhos de Bacalhau do Giba (8 un.)",
+        desc: "Receita clássica com generosa quantidade de bacalhau Gadus Morhua desfiado, batata e cheiro-verde fresco."
       },
       en: {
-        badge: "Classic Recipe",
+        badge: "Portuguese Heritage",
         name: "Authentic Codfish Croquettes (8 pcs)",
-        desc: "Traditional Portuguese-Brazilian cod croquettes made with authentic Norwegian bacalhau, fluffy potatoes, and fresh herbs."
+        desc: "Golden croquettes loaded with shredded authentic salted codfish, creamy potatoes, and fresh garden herbs."
       },
       ar: {
-        badge: "وصفة كلاسيكية",
-        name: "كروكيت سمك الباكالاو التقليدي (8 قطع)",
-        desc: "أقراص مقرمشة من سمك القد النرويجي الفاخر مع البطاطس المهروسة والأعشاب وزيت الزيتون البكر."
+        badge: "تراث عريق",
+        name: "كرات سمك الباكالهاو المقرمشة (8 قطع)",
+        desc: "كرات مقرمشة ذهبية محشوة بسمك القد الفاخر مع البطاطس المهروسة والأعشاب الطازجة."
+      }
+    }
+  },
+  {
+    id: "coxinhas-frango",
+    category: "petiscos",
+    price: 42.00,
+    image: "assets/images/petiscos.jpg?v=3.0",
+    translations: {
+      pt: {
+        badge: "Clássico Paulistano",
+        name: "Porção de Mini Coxinhas com Catupiry (10 un.)",
+        desc: "Massa leve de batata recheada com peito de frango temperado e recheio cremoso de requeijão Catupiry."
+      },
+      en: {
+        badge: "São Paulo Classic",
+        name: "Crispy Chicken & Catupiry Coxinhas (10 pcs)",
+        desc: "Tear-drop shaped potato croquettes filled with seasoned shredded chicken breast and creamy Brazilian Catupiry cheese."
+      },
+      ar: {
+        badge: "كلاسيكية ساو باولو",
+        name: "كرات كوشينيا الدجاج مع الجبن الكريمي (10 قطع)",
+        desc: "فطائر الكوشينيا البرازيلية المقرمشة بشكل الدمعة، محشوة بصدور الدجاج المتبلة مع جبن الكاتوبيري اللذيذ."
       }
     }
   },
@@ -227,80 +227,80 @@ const MENU_ITEMS = [
     id: "feijoada-completa",
     category: "pratos",
     featured: true,
-    price: 135.00,
-    image: "assets/images/feijoada.jpg",
+    price: 125.00,
+    image: "assets/images/feijoada.jpg?v=3.0",
     translations: {
       pt: {
-        badge: "Tradição de Sábado",
-        name: "Feijoada Completa do Giba (Serve 2 a 3 pessoas)",
-        desc: "Servida aos sábados na cumbuca de barro: feijão preto com carnes nobres selecionadas (costelinha, lombo, paio e carne seca). Acompanha arroz soltinho, couve refogada, farofa da casa, torresmo e laranjas frescas."
+        badge: "Estrela do Sábado",
+        name: "Feijoada Completa na Cumbuca (Serve 2 a 3 pessoas)",
+        desc: "A tradicional feijoada paulistana servida aos sábados: carnes nobres selecionadas, arroz branco soltinho, couve refogada no alho, farofa crocante, torresmo e laranjas frescas."
       },
       en: {
-        badge: "Saturday Tradition",
-        name: "Giba's Signature Feijoada Completa (Serves 2-3)",
-        desc: "Traditional Saturday specialty served in clay pots: rich black bean stew with prime ribs, smoked sausage, and dried beef. Accompanied by white rice, garlic collard greens, toasted farofa, crispy pork belly, and fresh oranges."
+        badge: "Saturday Star",
+        name: "Traditional Saturday Feijoada Feast (Serves 2-3)",
+        desc: "Authentic slow-simmered black bean stew packed with premium smoked pork cuts, served in a traditional clay pot with fluffy garlic rice, sautéed collard greens, toasted farofa, crispy pork cracklings, and fresh orange slices."
       },
       ar: {
-        badge: "تقليد يوم السبت",
-        name: "فيجوادا جيبا التقليدية الكاملة (تكفي 2 إلى 3 أشخاص)",
-        desc: "طبق البرازيل الوطني الشهير يُقدم في أوانٍ فخارية: يخنة الفاصوليا السوداء مع اللحوم الفاخرة، تقدم مع الأرز الأبيض والملفوف المحمص ودقيق المنيهوت المتبل وشرائح البرتقال."
+        badge: "نجم يوم السبت",
+        name: "وليمة الفيجوادا البرازيلية الكاملة (تكفي 2 إلى 3 أشخاص)",
+        desc: "طبق الفيجوادا التاريخي المطبوخ ببطء في أوانٍ فخارية، مع الأرز الأبيض بالثوم، والكرنب الأخضر المشوح، والفاروفا المقرمشة، وشرائح البرتقال المنعشة."
       }
     }
   },
   {
-    id: "file-parmegiana-giba",
+    id: "parmegiana-file-mignon",
     category: "pratos",
     price: 98.00,
-    image: "assets/images/petiscos.jpg",
+    image: "assets/images/petiscos.jpg?v=3.0",
     translations: {
       pt: {
-        badge: "Prato Farto",
-        name: "Filé à Parmegiana da Casa",
-        desc: "Filé mignon empanado e crocante, coberto com molho artesanal de tomates frescos e gratinado com queijo muçarela. Acompanha arroz e fritas crocantes."
+        badge: "Almoço dos Campeões",
+        name: "Filé Mignon à Parmegiana do Balcão",
+        desc: "Corte nobre de filé mignon empanado e crocante, coberto com molho artesanal de tomates frescos e queijo muçarela gratinado. Acompanha arroz e fritas."
       },
       en: {
-        badge: "Hearty Meal",
-        name: "House Filet Mignon Parmigiana",
-        desc: "Crispy breaded tenderloin steak smothered in house-made fresh tomato sauce and bubbly melted mozzarella. Served with rice and fries."
+        badge: "Champion's Lunch",
+        name: "Tender Filet Mignon Parmigiana",
+        desc: "Breaded prime beef tenderloin cutlet smothered in homemade chunky marinara sauce and melted browned mozzarella, served with rice and French fries."
       },
       ar: {
-        badge: "وجبة فاخرة",
-        name: "ستيك بارميجيانا فيليه مينيون",
-        desc: "فيليه لحم بقري طري مغطى بصلصة الطماطم الإيطالية الطازجة والجبن الذائب المحمر، يقدم مع الأرز والبطاطس المقلية."
+        badge: "غداء الأبطال",
+        name: "بارميجيانا فيليه مينيون الفاخر",
+        desc: "لحم فيليه مينيون بقري طري ومقرمش مغطى بصلصة الطماطم الإيطالية الغنية والجبن الموزاريلا المذاب، يُقدم مع الأرز والبطاطس المقرمشة."
       }
     }
   },
   {
-    id: "picanha-chapa",
+    id: "escondidinho-carne-seca",
     category: "pratos",
-    price: 118.00,
-    image: "assets/images/petiscos.jpg",
+    price: 54.00,
+    image: "assets/images/petiscos.jpg?v=3.0",
     translations: {
       pt: {
-        badge: "Chapa Fumegante",
-        name: "Picanha Nobre Fatiada na Chapa",
-        desc: "Picanha grelhada servida fumegante na chapa de ferro com alho laminado dourado, farofa crocante, vinagrete fresco e pão de alho."
+        badge: "Confort Food",
+        name: "Escondidinho de Carne Seca com Mandioca",
+        desc: "Purê cremoso de mandioca gratinado com queijo parmesão sobre generosa camada de carne seca desfiada e temperada."
       },
       en: {
-        badge: "Sizzling Skillet",
-        name: "Sizzling Picanha Steak on Cast Iron",
-        desc: "Prime Brazilian Picanha steak sliced and served sizzling on iron skillet with golden garlic chips, Brazilian vinaigrette, farofa, and garlic bread."
+        badge: "Comfort Food",
+        name: "Escondidinho (Cassava Shepherd's Pie)",
+        desc: "Creamy layered yucca puree gratinated with parmesan cheese over seasoned shredded Brazilian sun-dried beef."
       },
       ar: {
-        badge: "صاج ساخن مشوي",
-        name: "ستيك بيكانيا الفاخر على الصاج الساخن",
-        desc: "شرائح لحم البيكانيا البرازيلي الفاخر المشوي على صاج الحديد مع رقائق الثوم المقرمشة وصلصة الخضار والخبز المحمص."
+        badge: "طبق دافئ ومميز",
+        name: "إسكونديدينيو الكاسافا باللحم المجفف",
+        desc: "فطيرة برازيلية من هريس جذور الكاسافا الكريمي تعلو طبقة غنية من اللحم المتبل مع الجبن الغراتان المحمر."
       }
     }
   },
 
-  // --- CAIPIRINHAS & BEBIDAS ---
+  // --- BEBIDAS & CAIPIRINHAS ---
   {
     id: "caipirinha-tangerina-pimenta",
     category: "bebidas",
     featured: true,
     price: 32.00,
-    image: "assets/images/caipirinhas.jpg",
+    image: "assets/images/caipirinhas.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Criação Autoral",
@@ -324,7 +324,7 @@ const MENU_ITEMS = [
     category: "bebidas",
     featured: true,
     price: 28.00,
-    image: "assets/images/caipirinhas.jpg",
+    image: "assets/images/caipirinhas.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Clássica",
@@ -347,7 +347,7 @@ const MENU_ITEMS = [
     id: "caipirinha-maracuja-caju",
     category: "bebidas",
     price: 34.00,
-    image: "assets/images/caipirinhas.jpg",
+    image: "assets/images/caipirinhas.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Tropical",
@@ -370,7 +370,7 @@ const MENU_ITEMS = [
     id: "chopp-estupidamente-gelado",
     category: "bebidas",
     price: 14.00,
-    image: "assets/images/hero.jpg",
+    image: "assets/images/hero_pastel_chopp.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Super Gelado",
@@ -395,7 +395,7 @@ const MENU_ITEMS = [
     id: "pudim-leite-condensado",
     category: "sobremesas",
     price: 18.00,
-    image: "assets/images/feijoada.jpg",
+    image: "assets/images/feijoada.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Sobremesa Clássica",
@@ -418,7 +418,7 @@ const MENU_ITEMS = [
     id: "pastel-doce-nutella-banana",
     category: "sobremesas",
     price: 19.50,
-    image: "assets/images/pasteis.jpg",
+    image: "assets/images/pasteis_artesanais.jpg?v=3.0",
     translations: {
       pt: {
         badge: "Doçura Crocante",
